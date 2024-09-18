@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnav Jain - Frontend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hover effect for the service cards */
+        .service-card:hover {
+            transform: scale(1.05);
+            border-color: #FF7A00;
+        }
+
+        /* Dark mode styles */
+        body.dark {
+            background-color: #2d3740;
+            color: #fff;
+        }
+
+        .dark .text-gray-600,
+        .dark .text-gray-700,
+        .dark .text-gray-900 {
+            color: #fff;
+        }
+
+        .dark .bg-gray-100,
+        .dark .bg-gray-200,
+        .dark .bg-gray-800,
+        .dark .bg-gray-900 {
+            background-color: #202c37;
+        }
+
+        .dark .hover:text-gray-600,
+        .dark .hover:text-gray-700,
+        .dark .hover:text-gray-900 {
+            color: #f1f5f8;
+        }
+
+        .dark .hover:bg-gray-800 {
+            background-color: #1a252f;
+        }
+
+        .dark .ion-icon {
+            color: #f1f5f8;
+        }
+
+        .dark .ion-icon:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans dark:bg-gray-900 dark:text-white">
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center p-6 bg-white shadow-md z-50 dark:bg-gray-800">
+        <div class="text-2xl font-bold text-gray-900 dark:text-white">
+          Arnav Jain
+        </div>
+        <nav class="space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Home</a>
+          <a href="#about-me" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">About Me</a>
+          <a href="projects.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Projects</a>
+          <a href="contact.html" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600">Contact Me</a>
+          <button id="dark-mode-toggle" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <ion-icon name="moon-outline" class="text-2xl"></ion-icon>
+          </button>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="flex justify-center items-center min-h-screen pt-24 bg-white dark:bg-gray-900">
+        <div class="w-full max-w-4xl p-6 bg-white shadow-lg rounded-lg flex space-x-8 relative dark:bg-gray-800">
+            <!-- Left Content: Text -->
+            <div class="flex-1">
+                <h1 class="text-5xl font-bold mb-4 text-gray-900 dark:text-white">Arnav Jain</h1>
+                <p class="text-2xl text-orange-500 mb-2">Frontend Developer</p>
+                <p class="text-lg text-gray-600 mb-6 dark:text-gray-400">
+                    I specialize in building modern, responsive websites that offer exceptional user experiences. My focus on both aesthetics and functionality ensures quality results in every project.
+                </p>
+                <div class="flex space-x-4 mb-6">
+                    <!-- Social Icons (Ionicons) -->
+                    <a href="https://www.instagram.com/ronaldo0z1t/" class="text-gray-600 hover:text-orange-500 transition dark:text-gray-400">
+                        <ion-icon name="logo-instagram" class="text-3xl"></ion-icon>
+                    </a>
+                    <a href="https://x.com/arnavj0610" class="text-gray-600 hover:text-blue-500 transition dark:text-gray-400">
+                        <ion-icon name="logo-twitter" class="text-3xl"></ion-icon>
+                    </a>
+                    <a href="https://github.com/ArnavJain-op" class="text-gray-600 hover:text-black transition dark:text-gray-400">
+                        <ion-icon name="logo-github" class="text-3xl"></ion-icon>
+                    </a>
+                </div>
+                <div class="text-sm text-gray-500 animate-pulse dark:text-gray-400">
+                    Scroll down for more
+                </div>
+            </div>
+
+            <!-- Right Content: Image -->
+            <div class="flex-1 flex justify-center items-center">
+                <img src="photos/DALL·E 2024-09-16 15.37.08 - A modern, minimalistic logo design for 'Arnav Jain' featuring the text 'Arnav Jain - Web Designer'. The design should include sleek, geometric element.webp" alt="Arnav Jain Logo" class="w-64 h-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Down Icon -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <a href="#about-me" class="animate-bounce">
+            <ion-icon name="chevron-down-outline" class="text-3xl text-gray-700 dark:text-white"></ion-icon>
+        </a>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="min-h-screen bg-gray-100 flex justify-center items-center pt-24 dark:bg-gray-900">
+        <div class="flex max-w-4xl p-6 bg-white shadow-md rounded-lg space-x-8 dark:bg-gray-800">
+            <!-- Left: Image -->
+            <div class="flex-shrink-0">
+                <img src="photos/DALL·E 2024-09-16 15.56.26 - A modern, minimalistic logo design for 'Arnav Jain' featuring the text 'Arnav Jain - Web Designer'. The design should include sleek, geometric element.webp" 
+                alt="Image of Arnav Jain" class="w-64 h-auto rounded-lg shadow-lg">
+            </div>
+
+            <!-- Right: Content -->
+            <div class="flex flex-col justify-center space-y-4">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Arnav Jain</h2>
+                <p class="text-lg text-gray-700 leading-relaxed dark:text-gray-400">
+                    I am a passionate web designer with a love for crafting sleek and responsive designs. With a background in web development and design, I specialize in creating modern, minimalistic websites that prioritize user experience and visual appeal. I thrive on turning ideas into digital realities.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed dark:text-gray-400">
+                    My expertise lies in HTML, CSS, and Tailwind, but I’m constantly evolving and learning new technologies. I believe in continuous growth and staying ahead of trends, which is why I dedicate time to sharpening my skills and keeping up with the latest in design and development.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed dark:text-gray-400">
+                    Outside of work, I enjoy exploring the world of art, fitness, and technology. My ultimate goal is to create websites that not only look good but also deliver an exceptional user experience.
+                </p>
+
+                <!-- Skills or CTA Buttons -->
+                <div class="flex space-x-4 mt-6">
+                    <a href="#contact" class="bg-gray-800 text-white py-2 px-4 rounded-lg shadow hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 transition">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="min-h-screen flex justify-center items-center bg-gray-100 py-24 dark:bg-gray-900">
+        <div class="max-w-6xl w-full text-center">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900 dark:text-white">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1: Web Design -->
+                <div class="service-card p-6 border-2 border-gray-200 bg-white rounded-lg transition-transform duration-300 dark:bg-gray-800 dark:border-gray-700">
+                    <ion-icon name="desktop-outline" class="text-5xl text-orange-500 mb-4"></ion-icon>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Web Design</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        I create user-centric designs that are both visually appealing and functional.
+                    </p>
+                </div>
+
+                <!-- Service 2: Frontend Development -->
+                <div class="service-card p-6 border-2 border-gray-200 bg-white rounded-lg transition-transform duration-300 dark:bg-gray-800 dark:border-gray-700">
+                    <ion-icon name="code-slash-outline" class="text-5xl text-orange-500 mb-4"></ion-icon>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Frontend Development</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        I develop responsive websites with a focus on performance and usability.
+                    </p>
+                </div>
+
+                <!-- Service 3: SEO Optimization -->
+                <div class="service-card p-6 border-2 border-gray-200 bg-white rounded-lg transition-transform duration-300 dark:bg-gray-800 dark:border-gray-700">
+                    <ion-icon name="search-outline" class="text-5xl text-orange-500 mb-4"></ion-icon>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">SEO Optimization</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        I optimize websites for search engines to increase visibility and traffic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <!-- Left: About Section -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Arnav Jain</h3>
+                    <p class="text-gray-400">I specialize in building modern, responsive websites with a focus on aesthetics and functionality. Let's build something great together.</p>
+                </div>
+
+                <!-- Center: Navigation Links -->
+                <div class="flex space-x-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Navigation</h4>
+                        <ul>
+                            <li class="mb-2"><a href="index.html" class="hover:text-orange-500">Home</a></li>
+                            <li class="mb-2"><a href="index.html" class="hover:text-orange-500">About Me</a></li>
+                            <li class="mb-2"><a href="projects.html" class="hover:text-orange-500">Projects</a></li>
+                            <li class="mb-2"><a href="contact.html" class="hover:text-orange-500">Contact Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Social Media Links -->
+                <div class="mt-6 md:mt-0">
+                    <h4 class="text-xl font-semibold mb-4">Follow Me</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/ronaldo0z1t" class="hover:text-orange-500 transition">
+                            <ion-icon name="logo-instagram" class="text-3xl"></ion-icon>
+                        </a>
+                        <a href="https://www.twitter.com/arnavj0610" class="hover:text-blue-500 transition">
+                            <ion-icon name="logo-twitter" class="text-3xl"></ion-icon>
+                        </a>
+                        <a href="https://www.github.com/ArnavJain-op" class="hover:text-white transition">
+                            <ion-icon name="logo-github" class="text-3xl"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400">
+                <p>&copy; 2024 Arnav Jain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        // Function to toggle dark mode
+        const toggleDarkMode = () => {
+            const html = document.documentElement; // Apply to the html element
+            html.classList.toggle('dark'); // Toggle the dark class
+
+            // Save the user's theme preference in localStorage
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        };
+
+        // Check the saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark'); // Apply the dark class to the html element
+        }
+
+        // Add event listener to the dark mode toggle button (moon icon)
+        document.getElementById('dark-mode-toggle').addEventListener('click', toggleDarkMode);
+    </script>
+</body>
+</html>

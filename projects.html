@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Styling for the project cards */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .view-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .project-card:hover .view-icon {
+            background-color: #FF7A00; /* Change color on hover */
+        }
+
+        .view-icon ion-icon {
+            font-size: 1.5rem;
+        }
+    
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hover effect for the service cards */
+        .service-card:hover {
+            transform: scale(1.05);
+            border-color: #FF7A00;
+        }
+
+        /* Dark mode styles */
+        body.dark {
+            background-color: #2d3740;
+            color: #fff;
+        }
+
+        .dark .text-gray-600,
+        .dark .text-gray-700,
+        .dark .text-gray-900 {
+            color: #fff;
+        }
+
+        .dark .bg-gray-100,
+        .dark .bg-gray-200,
+        .dark .bg-gray-800,
+        .dark .bg-gray-900 {
+            background-color: #202c37;
+        }
+
+        .dark .hover:text-gray-600,
+        .dark .hover:text-gray-700,
+        .dark .hover:text-gray-900 {
+            color: #f1f5f8;
+        }
+
+        .dark .hover:bg-gray-800 {
+            background-color: #1a252f;
+        }
+
+        .dark .ion-icon {
+            color: #f1f5f8;
+        }
+
+        .dark .ion-icon:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans dark:bg-gray-900 dark:text-white">
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center p-6 bg-white shadow-md z-50 dark:bg-gray-800">
+        <div class="text-2xl font-bold text-gray-900 dark:text-white">
+          Arnav Jain
+        </div>
+        <nav class="space-x-4">
+          <a href="index.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Home</a>
+          <a href="index.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">About Me</a>
+          <a href="projects.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Projects</a>
+          <a href="contact.html" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600">Contact Me</a>
+          <button id="dark-mode-toggle" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <ion-icon name="moon-outline" class="text-2xl"></ion-icon>
+          </button>
+        </nav>
+    </header>
+    
+    <!-- Projects Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center py-24">
+        <div class="max-w-6xl w-full">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card p-4 bg-white shadow-lg rounded-lg dark:bg-gray-800">
+                    <img src="photos/amazon-logo-1024x683.png" alt="Restaurant Website" class="w-full h-48 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Amazon Replica</h3>
+                        <p class="text-gray-500 dark:text-gray-300">Website</p>
+                        <p class="text-gray-600 dark:text-gray-400">This project is a replica of the Amazon website, focusing on building a responsive e-commerce platform. It likely includes key features like product listings, user authentication, shopping cart functionality, and payment integration. The design mimics Amazon's layout, focusing on usability and clean, intuitive navigation.</p>
+                    </div>
+                    <div class="view-icon">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card p-4 bg-white shadow-lg rounded-lg dark:bg-gray-800">
+                    <img src="photos/Screenshot 2024-09-16 182219.png" alt="Yoga App" class="w-full h-48 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">FitFusion</h3>
+                        <p class="text-gray-500 dark:text-gray-300">Website</p>
+                        <p class="text-gray-600 dark:text-gray-400">FitFusion is a fitness-focused website. It contains sections like Home, Blog, Workout, Nutrition, and a Premium section. The design uses vibrant colors and Tailwind CSS for styling. This project is ideal for promoting fitness-related content, workouts, and nutrition advice, and likely includes membership features for premium users.</p>
+                    </div>
+                    <div class="view-icon">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card p-4 bg-white shadow-lg rounded-lg dark:bg-gray-800">
+                    <img src="photos/images.jpg" alt="Fast Food App" class="w-full h-48 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Toronto Zoo</h3>
+                        <p class="text-gray-500 dark:text-gray-300">Website</p>
+                        <p class="text-gray-600 dark:text-gray-400">A project that likely recreates the official website for the Toronto Zoo. It could feature details about different animals, visitor information, ticket booking, and interactive features like a virtual zoo tour or event information. The design would focus on making the zoo experience engaging and informative.</p>
+                    </div>
+                    <div class="view-icon">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card p-4 bg-white shadow-lg rounded-lg dark:bg-gray-800">
+                    <img src="photos/Fun_Facts_about_Astronauts.webp" alt="Portfolio Website" class="w-full h-48 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Spaceheck</h3>
+                        <p class="text-gray-500 dark:text-gray-300">Website</p>
+                        <p class="text-gray-600 dark:text-gray-400">This project is designed for astronauts, focusing on their daily routines and related tasks. It could include features such as task scheduling, mission details, health monitoring, and communication with ground control. The design likely prioritizes functionality, clarity, and ease of use, ensuring astronauts can access vital information quickly and efficiently during missions.</p>
+                    </div>
+                    <div class="view-icon">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card p-4 bg-white shadow-lg rounded-lg dark:bg-gray-800">
+                    <img src="photos/download.jpg" alt="E-commerce Platform" class="w-full h-48 object-cover rounded-lg">
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Another Portfolio</h3>
+                        <p class="text-gray-500 dark:text-gray-300">Website</p>
+                        <p class="text-gray-600 dark:text-gray-400">This portfolio project showcases your work, skills, and experience as a web developer. It likely includes an "About Me" section, a list of completed projects, contact information, and links to social media or GitHub accounts. The design emphasizes aesthetics, functionality, and easy navigation for potential clients or employers.</p>
+                    </div>
+                    <div class="view-icon">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ionicons for the view icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <!-- Left: About Section -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Arnav Jain</h3>
+                    <p class="text-gray-400">I specialize in building modern, responsive websites with a focus on aesthetics and functionality. Let's build something great together.</p>
+                </div>
+
+                <!-- Center: Navigation Links -->
+                <div class="flex space-x-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Navigation</h4>
+                        <ul>
+                            <li class="mb-2"><a href="index.html" class="hover:text-orange-500">Home</a></li>
+                            <li class="mb-2"><a href="index.html" class="hover:text-orange-500">About Me</a></li>
+                            <li class="mb-2"><a href="projects.html" class="hover:text-orange-500">Projects</a></li>
+                            <li class="mb-2"><a href="contact.html" class="hover:text-orange-500">Contact Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Social Media Links -->
+                <div class="mt-6 md:mt-0">
+                    <h4 class="text-xl font-semibold mb-4">Follow Me</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/ronaldo0z1t" class="hover:text-orange-500 transition">
+                            <ion-icon name="logo-instagram" class="text-3xl"></ion-icon>
+                        </a>
+                        <a href="https://www.twitter.com/arnavj0610" class="hover:text-blue-500 transition">
+                            <ion-icon name="logo-twitter" class="text-3xl"></ion-icon>
+                        </a>
+                        <a href="https://www.github.com/ArnavJain-op" class="hover:text-white transition">
+                            <ion-icon name="logo-github" class="text-3xl"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400">
+                <p>&copy; 2024 Arnav Jain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle dark mode
+        const toggleDarkMode = () => {
+            const html = document.documentElement; // Apply to the html element
+            html.classList.toggle('dark'); // Toggle the dark class
+
+            // Save the user's theme preference in localStorage
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        };
+
+        // Check the saved theme on page load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark'); // Apply the dark class to the html element
+        }
+
+        // Add event listener to the dark mode toggle button (moon icon)
+        document.getElementById('dark-mode-toggle').addEventListener('click', toggleDarkMode);
+    </script>
+</body>
+</html>

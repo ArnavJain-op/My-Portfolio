@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Arnav Jain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Additional Styling */
+        .custom-border {
+            border-left: 5px solid orange;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Hover effect for the service cards */
+        .service-card:hover {
+            transform: scale(1.05);
+            border-color: #FF7A00;
+        }
+        /* Dark mode styles */
+        body.dark {
+            background-color: #2d3740;
+            color: #fff;
+        }
+        .dark .text-gray-600,
+        .dark .text-gray-700,
+        .dark .text-gray-900 {
+            color: #fff;
+        }
+        .dark .bg-gray-100,
+        .dark .bg-gray-200,
+        .dark .bg-gray-800,
+        .dark .bg-gray-900 {
+            background-color: #202c37;
+        }
+        .dark .hover:text-gray-600,
+        .dark .hover:text-gray-700,
+        .dark .hover:text-gray-900 {
+            color: #f1f5f8;
+        }
+        .dark .hover:bg-gray-800 {
+            background-color: #1a252f;
+        }
+        .dark .ion-icon {
+            color: #f1f5f8;
+        }
+        .dark .ion-icon:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans dark:bg-gray-900 dark:text-white">
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 w-full flex justify-between items-center p-6 bg-white shadow-md z-50 dark:bg-gray-800">
+        <div class="text-2xl font-bold text-gray-900 dark:text-white">
+            Arnav Jain
+        </div>
+        <nav class="space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Home</a>
+            <a href="#about-me" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">About Me</a>
+            <a href="projects.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Projects</a>
+            <a href="contact.html" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600">Contact Me</a>
+            <button id="dark-mode-toggle" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                <ion-icon name="moon-outline" class="text-2xl"></ion-icon>
+            </button>
+        </nav>
+    </header>
+
+    <section class="min-h-screen flex justify-center items-center mt-20">
+        <div class="bg-white shadow-lg rounded-lg p-10 max-w-4xl flex space-x-8 dark:bg-gray-800">
+            <!-- Left: Contact Info -->
+            <div class="w-1/2 bg-gray-50 p-6 rounded-lg shadow-md custom-border dark:bg-gray-700">
+                <h2 class="text-4xl font-bold mb-4 dark:text-white">Contact Me.</h2>
+                <p class="text-gray-600 mb-4 dark:text-gray-300">
+                    I will read all emails. Send me any message you want, and I'll get back to you.
+                </p>
+                <p class="text-gray-600 mb-6 dark:text-gray-300">
+                    I need your <strong>Name</strong> and <strong>Email Address</strong>, but you won’t receive anything other than your reply.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.github.com/ArnavJain-op" class="text-3xl text-gray-600 hover:text-blue-500 transition dark:text-gray-400">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/ronaldo0z1t" class="text-3xl text-gray-600 hover:text-pink-500 transition dark:text-gray-400">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://www.twitter.com/arnavj0610" class="text-3xl text-gray-600 hover:text-blue-400 transition dark:text-gray-400">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="w-1/2 bg-black text-white p-6 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold mb-4">Send Me A Message</h2>
+                <form id="contactForm" class="space-y-4" onsubmit="sendMail(); return false;">
+                    <div class="flex space-x-4">
+                        <input type="text" id="name" name="name" placeholder="First Name" class="w-1/2 p-3 bg-gray-800 rounded-lg focus:outline-none" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address" class="w-1/2 p-3 bg-gray-800 rounded-lg focus:outline-none" required>
+                    </div>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none" required>
+                    <textarea id="message" name="message" rows="4" placeholder="Message" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none" required></textarea>
+                    <button type="submit" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition flex items-center">
+                        <ion-icon name="paper-plane-outline" class="mr-2"></ion-icon> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function sendMail() {
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value; var subject = document.getElementById('subject').value; var message = document.getElementById('message').value;
+                    // Create the mailto link
+        var mailtoLink = 'mailto:Arnavj0610@gmail.com' +
+            '?subject=' + encodeURIComponent(subject) +
+            '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage: ' + message);
+
+        // Open the user's email client with the mailto link
+        window.location.href = mailtoLink;
+    }
+</script>
+
+<!-- Footer Section -->
+<footer class="text-white py-8 bg-blue-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="md:flex md:justify-between">
+            <!-- Left: About Section -->
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold mb-4">Arnav Jain</h3>
+                <p class="text-gray-400">I specialize in building modern, responsive websites with a focus on aesthetics and functionality. Let's build something great together.</p>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <div class="flex space-x-6">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Navigation</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html" class="hover:text-orange-500">Home</a></li>
+                        <li class="mb-2"><a href="index.html" class="hover:text-orange-500">About Me</a></li>
+                        <li class="mb-2"><a href="projects.html" class="hover:text-orange-500">Projects</a></li>
+                        <li class="mb-2"><a href="contact.html" class="hover:text-orange-500">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right: Social Media Links -->
+            <div class="mt-6 md:mt-0">
+                <h4 class="text-xl font-semibold mb-4">Follow Me</h4>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/ronaldo0z1t" class="hover:text-orange-500 transition">
+                        <ion-icon name="logo-instagram" class="text-3xl"></ion-icon>
+                    </a>
+                    <a href="https://www.twitter.com/arnavj0610" class="hover:text-blue-500 transition">
+                        <ion-icon name="logo-twitter" class="text-3xl"></ion-icon>
+                    </a>
+                    <a href="https://www.github.com/ArnavJain-op" class="hover:text-white transition">
+                        <ion-icon name="logo-github" class="text-3xl"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400">
+            <p>&copy; 2024 Arnav Jain. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Function to toggle dark mode
+    const toggleDarkMode = () => {
+        const html = document.documentElement; // Apply to the html element
+        html.classList.toggle('dark'); // Toggle the dark class
+
+        // Save the user's theme preference in localStorage
+        if (html.classList.contains('dark')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    };
+
+    // Check the saved theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark'); // Apply the dark class to the html element
+    }
+
+    // Add event listener to the dark mode toggle button (moon icon)
+    document.getElementById('dark-mode-toggle').addEventListener('click', toggleDarkMode);
+</script>
+</body>
+</html>
